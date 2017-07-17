@@ -1,3 +1,4 @@
+#Programa R
 n<-3
 iter<-10
 A<-matrix(c(3,-0.1,-0.2,7.85,0.1,7,-0.3,-19.3,0.3,-0.2,10,71.4),nrow=n,ncol=n+1,byrow=T)
