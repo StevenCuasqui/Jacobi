@@ -41,7 +41,7 @@ if(conver==1){
 					Rx<-Rx+A[i,j]*x[j]			
 				}
 			}
-			#v[i]<-parRapply(cl, m, (A[i,n+1]-Rx)/A[i,i])
+			#v[i]<-parRapply(cl, (A[i,n+1]-Rx)/A[i,i])
 			v[i]<-(A[i,n+1]-Rx)/A[i,i]
 		}
 		
