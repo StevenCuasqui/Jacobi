@@ -14,6 +14,9 @@ x<-rep(0, n)
 v<-rep(0, n)
 print(A)
 conver<-1
+#inicializar cluster
+cl <- makeCluster(ncores, type = 'MPI')
+clusterSetupRNG(cl, type = 'RNGstream')
 for (i in 1:n){
 	suma=0
 	for(j in 1:n){
@@ -39,7 +42,7 @@ if(conver==1){
 			}
 
 			v[i]<-(A[i,n+1]-Rx)/A[i,i]
-			}
+		}
 		x<-v
 	}
 
