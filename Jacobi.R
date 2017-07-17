@@ -49,6 +49,9 @@ if(conver==1){
 	}
 
 print(x)
-}else{
+}
+stopCluster(cl)
+
+else{
 	print('El sistema no converge a una solucion')
 }
