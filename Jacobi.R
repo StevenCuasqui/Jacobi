@@ -1,8 +1,14 @@
 #Programa R
+#cargar snow, Rmpi
+library(snow)
+library(Rmpi)
+library(rlecuyer)
+ncores = as.numeric(Sys.getenv("PBS_NP"))
 n<-3
 iter<-10
 A<-matrix(c(3,-0.1,-0.2,7.85,0.1,7,-0.3,-19.3,0.3,-0.2,10,71.4),nrow=n,ncol=n+1,byrow=T)
 #A<-matrix(c(3,2,1,1,5,3,4,2,1,1,-1,1),nrow=n,ncol=n+1,byrow=T)
+proc <- ceiling(n / ncores)
 x<-rep(0, n)
 v<-rep(0, n)
 print(A)
